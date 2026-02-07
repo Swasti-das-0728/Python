@@ -10,8 +10,17 @@
 # while i >23:
 #     print(i)
 #     i += 5
-command = ""
-while command != "stop":
-    command = input("what is your question")
-    print("answer is", command)
+# command = ""
+# while command != "stop":
+#     command = input("what is your question")
+#     print("answer is", command)
  
+
+# n = 10
+# while n>1:
+#     print(n , end = " ")
+#     n -= 2
+
+table_no = int(input("waht is the number?"))
+for i in range (1,11,1):
+    print(table_no * i)

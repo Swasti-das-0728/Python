@@ -30,7 +30,17 @@
 # print("\nYour To-Do List:")
 # for t in tasks:
 #     print("-", t)
-import random
+# import random
 
-print("Rolling the dice...")
-print("You got:", random.randint(1, 6))
+# print("Rolling the dice...")
+# print("You got:", random.randint(1, 6))
+# word = input("Enter a word: ")
+
+# if word == word[::-1]:
+#     print("Palindrome ✅")
+# else:
+#     print("Not a palindrome ❌")
+
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+print("Total words:", len(words))

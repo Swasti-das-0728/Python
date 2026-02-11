@@ -41,6 +41,3 @@
 # else:
 #     print("Not a palindrome ❌")
 
-sentence = input("Enter a sentence: ")
-words = sentence.split()
-print("Total words:", len(words))

@@ -1,5 +1,10 @@
-def swapValues(a, b):
-    return b, a
-
-a, b = swapValues(1, 2)
-print(a, b)
+num = int(input("Enter number: "))
+if num > 1:
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            print("Not Prime")
+            break
+    else:
+        print("Prime")
+else:
+    print("Not Prime")

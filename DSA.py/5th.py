@@ -74,4 +74,4 @@ def lcs(text1, text2):
     
     return dp[m][n]
 
-print(lcs("abcde", "ace"))
+printf(lcs("abcde", "ace"))

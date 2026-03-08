@@ -16,12 +16,25 @@
 # print("After pop:", stack)
 
 
-arr = [10, 45, 2, 99, 23]
+# arr = [10, 45, 2, 99, 23]
 
-largest = arr[0]
+# largest = arr[0]
 
-for num in arr:
-    if num > largest:
-        largest = num
+# for num in arr:
+#     if num > largest:
+#         largest = num
 
-print("Largest element:", largest)
+# print("Largest element:", largest)from collections import deque
+from collections import deque
+
+queue = deque()
+
+queue.append(10)
+queue.append(20)
+queue.append(30)
+
+print("Queue:", queue)
+
+queue.popleft()
+
+print("After dequeue:", queue)

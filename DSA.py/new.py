@@ -49,15 +49,26 @@
 
 # fibonacci(n);
 
-arr = [10, 5, 20, 8, 25]
+# arr = [10, 5, 20, 8, 25]
 
-largest = second = -9999
+# largest = second = -9999
+
+# for num in arr:
+#     if num > largest:
+#         second = largest
+#         largest = num
+#     elif num > second and num != largest:
+#         second = num
+
+# print("Second largest:", second)
+arr = [1,2,2,3,3,3,4]
+
+freq = {}
 
 for num in arr:
-    if num > largest:
-        second = largest
-        largest = num
-    elif num > second and num != largest:
-        second = num
+    if num in freq:
+        freq[num] += 1
+    else:
+        freq[num] = 1
 
-print("Second largest:", second)
+print(freq)

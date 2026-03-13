@@ -72,12 +72,20 @@
 #         freq[num] = 1
 
 # print(freq)
-arr = [12, 45, 7, 89, 34]
+# arr = [12, 45, 7, 89, 34]
 
-max_val = arr[0]
+# max_val = arr[0]
+
+# for num in arr:
+#     if num > max_val:
+#         max_val = num
+
+# print("Maximum:", max_val)
+arr = [5, 10, 15, 20]
+
+total = 0
 
 for num in arr:
-    if num > max_val:
-        max_val = num
+    total += num
 
-print("Maximum:", max_val)
+print("Sum:", total)

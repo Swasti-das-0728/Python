@@ -81,11 +81,29 @@
 #         max_val = num
 
 # print("Maximum:", max_val)
-arr = [5, 10, 15, 20]
+# arr = [5, 10, 15, 20]
 
-total = 0
+# total = 0
 
-for num in arr:
-    total += num
+# for num in arr:
+#     total += num
 
-print("Sum:", total)
+# print("Sum:", total)
+
+def binary_search(arr, key):
+    low = 0
+    high = len(arr)-1
+
+    while low <= high:
+        mid = (low+high)//2
+
+        if arr[mid] == key:
+            return mid
+        elif arr[mid] < key:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1
+
+print(binary_search([10,20,30,40],30))

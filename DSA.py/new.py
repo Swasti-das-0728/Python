@@ -108,11 +108,33 @@
 
 # print(binary_search([10,20,30,40],30))
 
-arr = [5,3,8,4,2]
+# arr = [5,3,8,4,2]
 
-for i in range(len(arr)):
-    for j in range(len(arr)-i-1):
-        if arr[j] > arr[j+1]:
-            arr[j], arr[j+1] = arr[j+1], arr[j]
+# for i in range(len(arr)):
+#     for j in range(len(arr)-i-1):
+#         if arr[j] > arr[j+1]:
+#             arr[j], arr[j+1] = arr[j+1], arr[j]
 
-print(arr)
+# # print(arr)
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
+
+def binary_search(arr, key):
+    low = 0
+    high = len(arr)-1
+
+    while low <= high:
+        mid = (low+high)//2
+
+        if arr[mid] == key:
+            return mid
+        elif arr[mid] < key:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1
+
+print(binary_search([10,20,30,40],30))

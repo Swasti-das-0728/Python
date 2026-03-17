@@ -121,6 +121,24 @@
 #         self.data = data
 #         self.next = None
 
+# def binary_search(arr, key):
+#     low = 0
+#     high = len(arr)-1
+
+#     while low <= high:
+#         mid = (low+high)//2
+
+#         if arr[mid] == key:
+#             return mid
+#         elif arr[mid] < key:
+#             low = mid + 1
+#         else:
+#             high = mid - 1
+
+#     return -1
+
+# print(binary_search([10,20,30,40],30))
+
 def binary_search(arr, key):
     low = 0
     high = len(arr)-1

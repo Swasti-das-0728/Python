@@ -1,41 +1,69 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
 
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
 
-    # Insert at end
-    def insert(self, data):
-        new_node = Node(data)
+#     # Insert at end
+#     def insert(self, data):
+#         new_node = Node(data)
 
-        if self.head is None:
-            self.head = new_node
-            return
+#         if self.head is None:
+#             self.head = new_node
+#             return
 
-        temp = self.head
-        while temp.next:
-            temp = temp.next
+#         temp = self.head
+#         while temp.next:
+#             temp = temp.next
 
-        temp.next = new_node
+# #         temp.next = new_node
 
-    # Display list
-    def display(self):
-        temp = self.head
-        while temp:
-            print(temp.data, end=" -> ")
-            temp = temp.next
-        print("None")
+# #     # Display list
+# #     def display(self):
+# #         temp = self.head
+# #         while temp:
+# #             print(temp.data, end=" -> ")
+# #             temp = temp.next
+# #         print("None")
 
 
-# Create Linked List
-ll = LinkedList()
+# # # Create Linked List
+# # ll = LinkedList()
 
-ll.insert(10)
-ll.insert(20)
-ll.insert(30)
+# # ll.insert(10)
+# # ll.insert(20)
+# # ll.insert(30)
 
-ll.display()
+# # ll.display()
+
+# def findSum(a, b):
+#     i, j = len(a) - 1, len(b) - 1
+#     carry = 0
+#     result = []
+
+#     while i >= 0 or j >= 0 or carry:
+#         sum_val = carry
+
+#         if i >= 0:
+#             sum_val += int(a[i])
+#             i -= 1
+#         if j >= 0:
+#             sum_val += int(b[j])
+#             j -= 1
+
+#         result.append(str(sum_val % 10))
+#         carry = sum_val // 10
+
+#     return ''.join(result[::-1])
+arr = [5,3,8,4,2]
+
+for i in range(len(arr)):
+    for j in range(len(arr)-i-1):
+        if arr[j] > arr[j+1]:
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+
+print(arr)

@@ -68,30 +68,72 @@
 
 # printkhn(arr);
 
-def binary_search(arr, target):
-    left = 0
-    right = len(arr) - 1
+# def binary_search(arr, target):
+#     left = 0
+#     right = len(arr) - 1
 
-    while left <= right:
-        mid = (left + right) // 2
+#     while left <= right:
+#         mid = (left + right) // 2
 
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
+#         if arr[mid] == target:
+#             return mid
+#         elif arr[mid] < target:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
 
-    return -1
+#     return -1
 
 
-# Example
-arr = [1, 3, 5, 7, 9, 11]
-target = 7
+# # Example
+# arr = [1, 3, 5, 7, 9, 11]
+# target = 7
 
-result = binary_search(arr, target
+# result = binary_search(arr, target
 
-if result != -1:
-    print("Element found at index:", result)
-else:
-    print("Element not found")
+# if result != -1:
+#     print("Element found at index:", result)
+# else:
+#     print("Element not found")
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    # Insert at end
+    def insert(self, data):
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+            return
+
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+
+        temp.next = new_node
+
+    # Display list
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+        print("None")
+
+
+# Create Linked List
+ll = LinkedList()
+
+ll.insert(10)
+ll.insert(20)
+ll.insert(30)
+
+ll.display()

@@ -137,22 +137,45 @@
 
 #     return -1
 
+# # print(binary_search([10,20,30,40],30))
+
+# def binary_search(arr, key):
+#     low = 0
+#     high = len(arr)-1
+
+#     while low <= high:
+#         mid = (low+high)//2
+
+#         if arr[mid] == key:
+#             return mid
+#         elif arr[mid] < key:
+#             low = mid + 1
+#         else:
+#             high = mid - 1
+
+#     return -1
+
 # print(binary_search([10,20,30,40],30))
+# n = int(input())
 
-def binary_search(arr, key):
-    low = 0
-    high = len(arr)-1
 
-    while low <= high:
-        mid = (low+high)//2
+# for i in range(1, 11):
+#     print(n, "x", i, "=", n * i)
 
-        if arr[mid] == key:
-            return mid
-        elif arr[mid] < key:
-            low = mid + 1
-        else:
-            high = mid - 1
+# n = 1234
 
-    return -1
+# sum = 0
+# while n > 0:
+#     sum += n % 10
+#     n //= 10
 
-print(binary_search([10,20,30,40],30))
+# print(sum)
+
+n = 1234
+
+rev = 0
+while n > 0:
+    rev = rev * 10 + n % 10
+    n //= 10
+
+print(rev)

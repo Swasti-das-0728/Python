@@ -171,11 +171,20 @@
 
 # print(sum)
 
-n = 1234
+# n = 1234
 
-rev = 0
-while n > 0:
-    rev = rev * 10 + n % 10
-    n //= 10
+# rev = 0
+# while n > 0:
+#     rev = rev * 10 + n % 10
+#     n //= 10
 
-print(rev)
+# print(rev)
+arr = [10, 45, 2, 99, 23]
+
+largest = arr[0]
+
+for num in arr:
+    if num > largest:
+        largest = num
+
+print(largest);\kkk

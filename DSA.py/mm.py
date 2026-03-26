@@ -1,12 +1,35 @@
-# arr = [2, 7, 11, 15]
-# target = 9
+import tkinter as tk
+from tkinter import messagebox
 
-# for i in range(len(arr)):
-#     for j in range(i+1, len(arr)):
-#         if arr[i] + arr[j] == target:
-#             print(i, j)
-arr = [1, 2, 2, 3, 4, 4, 5]
+# Create window
+root = tk.Tk()
+root.title("Student Form")
+root.geometry("300x300")
 
-unique = list(set(arr))
+# Labels
+tk.Label(root, text="Name").pack()
+name_entry = tk.Entry(root)
+name_entry.pack()
 
-print(unique)
+tk.Label(root, text="Email").pack()
+email_entry = tk.Entry(root)
+email_entry.pack()
+
+tk.Label(root, text="Age").pack()
+age_entry = tk.Entry(root)
+age_entry.pack()
+
+# Submit function
+def submit():
+    name = name_entry.get()
+    email = email_entry.get()
+    age = age_entry.get()
+
+    messagebox.showinfo("Form Data",
+                        f"Name: {name}\nEmail: {email}\nAge: {age}")
+
+# Button
+tk.Button(root, text="Submit", command=submit).pack(pady=10)
+
+# Run app
+root.mainloop()

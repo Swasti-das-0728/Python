@@ -67,20 +67,33 @@
 #     [3, 4]
 # ]
 
-# for row in arr:
-#     print(row)
-def bubble(arr1):
-    n = len(arr1)
-    for i in range(n):
-        swapped = False
-        for j in range(0,n-i-1):
-            if arr1[j] > arr1[j+1]:
-                arr1[j] , arr1[j+1] = arr1[j+1], arr1[j]
-                swapped = True
-                if not swapped:
-                    break
-    return arr1
+# # for row in arr:
+# #     print(row)
+# def bubble(arr1):
+#     n = len(arr1)
+#     for i in range(n):
+#         swapped = False
+#         for j in range(0,n-i-1):
+#             if arr1[j] > arr1[j+1]:
+#                 arr1[j] , arr1[j+1] = arr1[j+1], arr1[j]
+#                 swapped = True
+#                 if not swapped:
+#                     break
+#     return arr1
 
-arr1 = [23,45,43,12]
-bubble(arr1)
-print("sorted:", arr1)
+# arr1 = [23,45,43,12]
+# bubble(arr1)
+# print("sorted:", arr1)
+# /selection sort
+
+def selection(arr1):
+    n = len(arr1)
+    for i in range(n-1):
+        mini = i
+        for j in range (i+1 , n):
+            if(arr1[j]<arr1[mini]):
+                mini = j
+        arr1[i],arr1[mini] = arr1[mini],arr1[i]
+arr1 = [32,44,11,54,29]
+selection(arr1)
+print("sorted array are :", arr1)

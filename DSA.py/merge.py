@@ -86,14 +86,24 @@
 # print("sorted:", arr1)
 # /selection sort
 
-def selection(arr1):
-    n = len(arr1)
-    for i in range(n-1):
-        mini = i
-        for j in range (i+1 , n):
-            if(arr1[j]<arr1[mini]):
-                mini = j
-        arr1[i],arr1[mini] = arr1[mini],arr1[i]
-arr1 = [32,44,11,54,29]
-selection(arr1)
-print("sorted array are :", arr1)
+# def selection(arr1):
+#     n = len(arr1)
+#     for i in range(n-1):
+#         mini = i
+#         for j in range (i+1 , n):
+#             if(arr1[j]<arr1[mini]):
+#                 mini = j
+#         arr1[i],arr1[mini] = arr1[mini],arr1[i]
+# arr1 = [32,44,11,54,29]
+# selection(arr1)
+# print("sorted array are :", arr1)
+arr = [1, 2, 3, 4]
+
+prefix = [0] * len(arr)
+
+prefix[0] = arr[0]
+
+for i in range(1, len(arr)):
+    prefix[i] = prefix[i-1] + arr[i]
+
+print(prefix)

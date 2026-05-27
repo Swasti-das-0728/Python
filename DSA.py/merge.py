@@ -97,13 +97,23 @@
 # arr1 = [32,44,11,54,29]
 # selection(arr1)
 # print("sorted array are :", arr1)
-arr = [1, 2, 3, 4]
+# arr = [1, 2, 3, 4]
 
-prefix = [0] * len(arr)
+# prefix = [0] * len(arr)
 
-prefix[0] = arr[0]
+# prefix[0] = arr[0]
+
+# for i in range(1, len(arr)):
+#     prefix[i] = prefix[i-1] + arr[i]
+
+# print(prefix)
+arr = [-2,1,-3,4,-1,2,1,-5,4]
+
+max_sum = arr[0]
+current = arr[0]
 
 for i in range(1, len(arr)):
-    prefix[i] = prefix[i-1] + arr[i]
+    current = max(arr[i], current + arr[i])
+    max_sum = max(max_sum, current)
 
-print(prefix)
+print(max_sum)

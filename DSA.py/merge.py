@@ -117,12 +117,21 @@ arr = [-2,1,-3,4,-1,2,1,-5,4]
 #     max_sum = max(max_sum, current)
 
 # print(max_sum)
-arr = [1, 2, 2, 3, 4, 4]
+# arr = [1, 2, 2, 3, 4, 4]
 
-dup = []
+# dup = []
 
-for i in arr:
-    if arr.count(i) > 1 and i not in dup:
-        dup.append(i)
+# for i in arr:
+#     if arr.count(i) > 1 and i not in dup:
+#         dup.append(i)
 
-print(dup)
+# print(dup)
+arr = [1, 2, 3, 4, 5]
+
+k = 2
+
+k = k % len(arr)
+
+arr = arr[k:] + arr[:k]
+
+print(arr)

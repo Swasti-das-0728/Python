@@ -11,6 +11,7 @@
 #     arr[i], arr[min_index] = arr[min_index], arr[i]
 
 # print(arr)
+
 arr = [25,9,89, 11, 43, 21]
 
 n = len(arr)

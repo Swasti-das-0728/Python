@@ -25,8 +25,14 @@
 #     print("str1 is greater one")
 # else:
 #     print("last one is bigger") 
-position = input("please tell me your roll in a game")
-if position == 'rusher':
-    print("practice atleast 5hr")
+# position = input("please tell me your roll in a game")
+# if position == 'rusher':
+#     print("practice atleast 5hr")
+# else:
+#     print("go with the flow")
+
+num = int(input("provide your number"))
+if num % 2 == 0 :
+    print("it is a even number")
 else:
-    print("go with the flow")
+    print("odd")

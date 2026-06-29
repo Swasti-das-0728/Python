@@ -19,9 +19,14 @@
 #     print("hat")
 # else:
 #     print("no")
-str1 = str(input("enter a string"))
-str2 = str(input("enter a string"))
-if len(str1) > len(str2):
-    print("str1 is greater one")
+# str1 = str(input("enter a string"))
+# str2 = str(input("enter a string"))
+# if len(str1) > len(str2):
+#     print("str1 is greater one")
+# else:
+#     print("last one is bigger") 
+position = input("please tell me your roll in a game")
+if position == 'rusher':
+    print("practice atleast 5hr")
 else:
-    print("last one is bigger") 
+    print("go with the flow")

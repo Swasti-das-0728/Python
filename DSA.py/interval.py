@@ -31,8 +31,19 @@
 # else:
 #     print("go with the flow")
 
-num = int(input("provide your number"))
-if num % 2 == 0 :
-    print("it is a even number")
-else:
-    print("odd")
+# num = int(input("provide your number"))
+# if num % 2 == 0 :
+#     print("it is a even number")
+# else:
+# #     print("odd")
+# name = input("enter your name")
+# age = int(input("enter the age"))
+
+# if age> 18:
+#     print("hello + {name} you are a valid voter")
+# else:
+#     print("wait till 18")
+
+num = int(input("enter the table number"))
+for i in range(num,(num*10+1),num):
+    print(i)

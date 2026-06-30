@@ -44,6 +44,12 @@
 # else:
 #     print("wait till 18")
 
-num = int(input("enter the table number"))
-for i in range(num,(num*10+1),num):
+# num = int(input("enter the table number"))
+# for i in range(num,(num*10+1),num):
+#     print(i)
+# a = "swasti"
+# for i in range(len(a)):
+#     print(a[i])
+a = "teg thryuy erdfuf"
+for i in  a:
     print(i)

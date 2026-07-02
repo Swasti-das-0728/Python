@@ -50,6 +50,29 @@
 # a = "swasti"
 # for i in range(len(a)):
 #     print(a[i])
-a = "teg thryuy erdfuf"
-for i in  a:
-    print(i)
+# a = "teg thryuy erdfuf"
+# for i in  a:
+#     if i == 'y':
+#         break
+#     else:
+#         print(i)
+
+def second_largest(arr):
+
+    first = second = float('-inf')
+
+    for num in arr:
+
+        if num > first:
+            second = first
+            first = num
+
+        elif num > second and num != first:
+            second = num
+
+    return second
+
+
+arr = list(map(int, input("Enter array: ").split()))
+
+print(second_largest(arr))

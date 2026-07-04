@@ -117,9 +117,12 @@
 # name = input("Enter your name: ")
 # print("Welcome", name)
 
-number = int(input("enter the digit"))
-for i in range(number):
-    if(i<number):
-        print("hello world")
-    else:
-        print("no words")
+# number = int(input("enter the digit"))
+# for i in range(number):
+#     if(i<number):
+#         print("hello world")
+#     else:
+#         print("no words")
+n = int(input("enter an number"))
+for i in range(0,n+1,1):
+    print(i)

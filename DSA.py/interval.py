@@ -99,20 +99,27 @@
 
 #     freq = {}
 
-#     for i in arr:
+# #     for i in arr:
 
-#         if i in freq:
-#             freq[i] += 1
-#         else:
-#             freq[i] = 1
+# #         if i in freq:
+# #             freq[i] += 1
+# #         else:
+# #             freq[i] = 1
 
-#     return freq
+# #     return freq
 
 
-# arr = list(map(int, input().split()))
+# # arr = list(map(int, input().split()))
 
-# print(frequency(arr))
-print("Hello World")
+# # print(frequency(arr))
+# print("Hello World")
 
-name = input("Enter your name: ")
-print("Welcome", name)
+# name = input("Enter your name: ")
+# print("Welcome", name)
+
+number = int(input("enter the digit"))
+for i in range(number):
+    if(i<number):
+        print("hello world")
+    else:
+        print("no words")

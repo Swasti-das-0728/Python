@@ -123,6 +123,17 @@
 #         print("hello world")
 #     else:
 #         print("no words")
-n = int(input("enter an number"))
-for i in range(0,n+1,1):
-    print(i)
+# # n = int(input("enter an number"))
+# # for i in range(0,n+1,1):
+# #     print(i)
+# n = int(input("enter an number"))
+# for i in range(n,0,-1):
+# #     print(i)
+# n = int(input("enter an number"))
+# for i in range(1,11):
+#     print(f"{n} * {i} = {n*i}")
+n = int(input("enter a number"))
+fact = 1
+for i in range(1,n+1):
+    fact = fact * i
+print(f"your factorial is {fact}")

@@ -132,8 +132,19 @@
 # n = int(input("enter an number"))
 # for i in range(1,11):
 #     print(f"{n} * {i} = {n*i}")
+# n = int(input("enter a number"))
+# fact = 1
+# for i in range(1,n+1):
+#     fact = fact * i
+# print(f"your factorial is {fact}")
 n = int(input("enter a number"))
-fact = 1
+even = 0
+odd = 0
 for i in range(1,n+1):
-    fact = fact * i
-print(f"your factorial is {fact}")
+    if i%2 == 0:
+        even = even+ i
+    else:
+        odd = odd + i
+print(f"your even and odd are {even},{odd}")
+
+

@@ -181,13 +181,22 @@
 #     if n%i == 0:
 #         print(i)
         
-n = int(input("Enter a number: "))
-sum =0
-for i in range(1,n):
-    if n%i == 0:
-        sum = sum + i
-if sum == n:
-    print("it is a perfect number")
-print(sum)
+# n = int(input("Enter a number: "))
+# sum =0
+# for i in range(1,n):
+#     if n%i == 0:
+#         sum = sum + i
+# if sum == n:
+#     print("it is a perfect number")
+# print(sum)
         
        
+n = int(input("Enter a number: "))
+prime=0
+for i in range(1,n+1):
+    if n%i == 0:
+        prime = prime + 1
+print(prime)
+if prime<=2:
+    print("this is a prime number")
+         

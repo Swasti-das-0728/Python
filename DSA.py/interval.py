@@ -202,5 +202,10 @@
          
 
 a = "swasti"
+b = ""
 for i in range(len(a)-1,-1,-1):
-    print(a[i])
+    b = b + a[i]
+if b == a:
+    print("it is a pallendrom")
+else:
+    print("not paliendrom")

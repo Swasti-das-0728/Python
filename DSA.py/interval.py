@@ -137,14 +137,33 @@
 # for i in range(1,n+1):
 #     fact = fact * i
 # print(f"your factorial is {fact}")
-n = int(input("enter a number"))
-even = 0
-odd = 0
-for i in range(1,n+1):
-    if i%2 == 0:
-        even = even+ i
-    else:
-        odd = odd + i
-print(f"your even and odd are {even},{odd}")
+# n = int(input("enter a number"))
+# even = 0
+# odd = 0
+# for i in range(1,n+1):
+#     if i%2 == 0:
+#         even = even+ i
+#     else:
+#         odd = odd + i
+# print(f"your even and odd are {even},{odd}")
 
+# n = int(input("Enter a number: "))
+
+# even = 0
+# odd = 0
+
+# for i in range(1, n + 1):
+#     if i % 2 == 0:
+#         even += i
+#     else:
+#         odd += i
+
+# print("Sum of even numbers =", even)
+# print("Sum of odd numbers =", odd)
+
+n = int(input("Enter a number: "))
+fact = 1
+for i in range(1,n+1):
+    fact = fact * i
+print(f"the factor is {fact}")
 

@@ -161,9 +161,33 @@
 # print("Sum of even numbers =", even)
 # print("Sum of odd numbers =", odd)
 
-n = int(input("Enter a number: "))
-fact = 1
-for i in range(1,n+1):
-    fact = fact * i
-print(f"the factor is {fact}")
+# n = int(input("Enter a number: "))
+# fact = 1
+# for i in range(1,n+1):
+#     fact = fact * i
+# print(f"the factor is {fact}")
+# n = int(input("Enter a number: "))
+# even = 0
+# odd = 0
+# for i in range(1,n+1):
+#     if i%2 == 0:
+#         even = even+i
+#     else:
+#         odd = odd+i
+# print(even , odd)
+# n = int(input("Enter a number: "))
 
+# for i in range(1,n+1):
+#     if n%i == 0:
+#         print(i)
+        
+n = int(input("Enter a number: "))
+sum =0
+for i in range(1,n):
+    if n%i == 0:
+        sum = sum + i
+if sum == n:
+    print("it is a perfect number")
+print(sum)
+        
+       

@@ -201,11 +201,43 @@
 #     print("this is a prime number")
          
 
-a = "swasti"
-b = ""
-for i in range(len(a)-1,-1,-1):
-    b = b + a[i]
-if b == a:
-    print("it is a pallendrom")
-else:
-    print("not paliendrom")
+# a = "swasti"
+# b = ""
+# for i in range(len(a)-1,-1,-1):
+#     b = b + a[i]
+# if b == a:
+#     print("it is a pallendrom")
+# else:
+#     print("not paliendrom")
+# n = int(input("enter a number"))
+
+# a = "katak"
+# b = ""
+# for i in range(len(a)-1,-1,-1):
+#     b = b + a[i]
+# if b == a:
+#     print("it is a paleindrom")
+# else:
+#     print("not a paleindrom")
+# n = int(input("enter a number"))
+# count = 0
+# for i in range(1,n+1):
+#     if n % i == 0:
+#         count = count + 1
+#         print(f"the prime of this number are{count}")
+# if count <= 2:
+#     print("this is a prime number")
+# else:
+#     print("this is not a prime number")
+a = "dshfi454@&$^^dfh"
+char = 0
+dig = 0
+spchr = 0
+for i in a:
+    if i.isdigit():
+        dig = dig+1
+    elif i.isalpha():
+        char = char+1
+    else:
+        spchr = spchr+1
+print(f"your digit are {dig}\n your alphabets are {char}\n your special character are{spchr}")

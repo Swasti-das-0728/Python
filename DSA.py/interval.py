@@ -229,15 +229,27 @@
 #     print("this is a prime number")
 # else:
 #     print("this is not a prime number")
-a = "dshfi454@&$^^dfh"
-char = 0
-dig = 0
-spchr = 0
-for i in a:
-    if i.isdigit():
-        dig = dig+1
-    elif i.isalpha():
-        char = char+1
-    else:
-        spchr = spchr+1
-print(f"your digit are {dig}\n your alphabets are {char}\n your special character are{spchr}")
+# a = "dshfi454@&$^^dfh"
+# char = 0
+# dig = 0
+# spchr = 0
+# for i in a:
+#     if i.isdigit():
+#         dig = dig+1
+#     elif i.isalpha():
+#         char = char+1
+#     else:
+#         spchr = spchr+1
+# print(f"your digit are {dig}\n your alphabets are {char}\n your special character are{spchr}")
+
+# # n = int(input("enter a number"))
+# a = int(input("enter a number"))
+# while a>0:
+#     print(a%10)
+#     a = a//10
+n = int(input("enter a number"))
+rev=0
+while n > 0:
+    rev = rev * 10 + n % 10
+    n = n//10
+print(rev)

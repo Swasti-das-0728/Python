@@ -254,13 +254,34 @@
 #     n = n//10
 # print(rev)
 
-a = int(input("enter an number"))
-rev = 0
-copy = a
-while a>0:
-    rev = rev*10 + a% 10
-    a = a//10
-if copy == rev:
-    print("pallendromic number")
-else:
-    print("not similar")
+# a = int(input("enter an number"))
+# rev = 0
+# copy = a
+# while a>0:
+#     rev = rev*10 + a% 10
+#     a = a//10
+# if copy == rev:
+#     print("pallendromic number")
+# else:
+#     print("not similar")
+
+
+import random
+
+num = random.randint(1, 11)
+tries = 0
+
+while True:
+    guess = int(input("Guess your number: "))
+    tries += 1
+
+    if num == guess:
+        print("You are correct!")
+        print("Tries:", tries)
+        break
+
+    elif num > guess:
+        print("Try higher")
+
+    else:
+        print("Try lower")

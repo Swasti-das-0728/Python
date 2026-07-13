@@ -247,9 +247,20 @@
 # while a>0:
 #     print(a%10)
 #     a = a//10
-n = int(input("enter a number"))
-rev=0
-while n > 0:
-    rev = rev * 10 + n % 10
-    n = n//10
-print(rev)
+# n = int(input("enter a number"))
+# rev=0
+# while n > 0:
+#     rev = rev * 10 + n % 10
+#     n = n//10
+# print(rev)
+
+a = int(input("enter an number"))
+rev = 0
+copy = a
+while a>0:
+    rev = rev*10 + a% 10
+    a = a//10
+if copy == rev:
+    print("pallendromic number")
+else:
+    print("not similar")

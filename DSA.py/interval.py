@@ -266,22 +266,42 @@
 #     print("not similar")
 
 
-import random
+# import random
 
-num = random.randint(1, 11)
-tries = 0
+# num = random.randint(1, 11)
+# tries = 0
 
-while True:
-    guess = int(input("Guess your number: "))
-    tries += 1
+# while True:
+#     guess = int(input("Guess your number: "))
+#     tries += 1
 
-    if num == guess:
-        print("You are correct!")
-        print("Tries:", tries)
-        break
+#     if num == guess:
+#         print("You are correct!")
+#         print("Tries:", tries)
+#         break
 
-    elif num > guess:
-        print("Try higher")
+#     elif num > guess:
+#         print("Try higher")
 
+#     else:
+#         print("Try lower")
+
+# functions
+# # there is different type of functions like int len etc..
+# def mul(a,b):
+#     print(f"the sum is {a*b}")
+# mul(3,88)
+# mul(3,28)
+# # mul(3,8)
+# def intro(name,age=22):
+#     print(f"your name is{name} and age{age}")
+# intro( "swasti",32)
+def pallendrome(str):
+    rev = ""
+    for i in range(len(str)-1,-1,-1):
+        rev = rev + str[i]
+    if rev==str:
+        print("this string is a pallendrom")
     else:
-        print("Try lower")
+        print("it is not a pallendrom")
+pallendrome("navan")

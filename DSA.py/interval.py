@@ -296,12 +296,17 @@
 # def intro(name,age=22):
 #     print(f"your name is{name} and age{age}")
 # intro( "swasti",32)
-def pallendrome(str):
-    rev = ""
-    for i in range(len(str)-1,-1,-1):
-        rev = rev + str[i]
-    if rev==str:
-        print("this string is a pallendrom")
-    else:
-        print("it is not a pallendrom")
-pallendrome("navan")
+# def pallendrome(str):
+#     rev = ""
+#     for i in range(len(str)-1,-1,-1):
+#         rev = rev + str[i]
+#     if rev==str:
+#         print("this string is a pallendrom")
+#     else:
+#         print("it is not a pallendrom")
+# pallendrome("navan")
+a =[12,43,66,32]     
+a.append(21)
+a.remove(66)
+a.remove(12)
+print(a)

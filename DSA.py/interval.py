@@ -311,11 +311,25 @@
 # a.remove(12)
 # print(a)
 
-n = [23,6,-32,-53,9]
-for i in n:
-    if i  >=0:
-        print(f"positive number {i}")
+# n = [23,6,-32,-53,9]
+# for i in n:
+#     if i  >=0:
+#         print(f"positive number {i}")
 
-for i in n:
-    if i<0:
-        print(f"negative are{i}")
+# for i in n:
+#     if i<0:
+#         print(f"negative are{i}")
+# n = [2,4,3555,2,4,2]
+# sum = 0
+# for i in n:
+#     sum = sum + i
+# print(sum/len(n))
+    
+n = [2,34,54,33,87]
+largest = n[0]
+index = 0
+for i in range(len(n)):
+    if n[i] > largest:
+        largest == n[i]
+        index = i
+print(n[i])

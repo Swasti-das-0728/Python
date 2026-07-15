@@ -305,8 +305,17 @@
 #     else:
 #         print("it is not a pallendrom")
 # pallendrome("navan")
-a =[12,43,66,32]     
-a.append(21)
-a.remove(66)
-a.remove(12)
-print(a)
+# a =[12,43,66,32]     
+# a.append(21)
+# a.remove(66)
+# a.remove(12)
+# print(a)
+
+n = [23,6,-32,-53,9]
+for i in n:
+    if i  >=0:
+        print(f"positive number {i}")
+
+for i in n:
+    if i<0:
+        print(f"negative are{i}")

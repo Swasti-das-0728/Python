@@ -325,11 +325,27 @@
 #     sum = sum + i
 # print(sum/len(n))
     
-n = [2,34,54,33,87]
-largest = n[0]
-index = 0
-for i in range(len(n)):
-    if n[i] > largest:
-        largest == n[i]
-        index = i
-print(n[i])
+# n = [2,34,54,33,87]
+# largest = n[0]
+# index = 0
+# for i in range(len(n)):
+#     if n[i] > largest:
+#         largest == n[i]
+#         index = i
+# print(n[i])
+def max_index(arr):
+
+    max_idx = 0
+
+    for i in range(1, len(arr)):
+
+        if arr[i] > arr[max_idx]:
+            max_idx = i
+
+    return max_idx
+
+
+arr = list(map(int, input("Enter array: ").split()))
+
+print("Maximum Index =", max_index(arr))
+print("Maximum Value =", arr[max_index(arr)])

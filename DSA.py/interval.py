@@ -333,19 +333,26 @@
 #         largest == n[i]
 #         index = i
 # print(n[i])
-def max_index(arr):
+# def max_index(arr):
 
-    max_idx = 0
+#     max_idx = 0
 
-    for i in range(1, len(arr)):
+#     for i in range(1, len(arr)):
 
-        if arr[i] > arr[max_idx]:
-            max_idx = i
+#         if arr[i] > arr[max_idx]:
+#             max_idx = i
 
-    return max_idx
+#     return max_idx
 
 
-arr = list(map(int, input("Enter array: ").split()))
+# arr = list(map(int, input("Enter array: ").split()))
 
-print("Maximum Index =", max_index(arr))
-print("Maximum Value =", arr[max_index(arr)])
+# print("Maximum Index =", max_index(arr))
+# print("Maximum Value =", arr[max_index(arr)])
+# print("cockroach" "Janta" "Party")
+a = int(input("enter a number"))
+try:
+    print(a/10)
+except Exception as err:
+    print("you can't multiply 0")
+print("printing done")

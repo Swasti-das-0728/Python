@@ -350,9 +350,14 @@
 # print("Maximum Index =", max_index(arr))
 # print("Maximum Value =", arr[max_index(arr)])
 # print("cockroach" "Janta" "Party")
-a = int(input("enter a number"))
-try:
-    print(a/10)
-except Exception as err:
-    print("you can't multiply 0")
-print("printing done")
+# a = int(input("enter a number"))
+# try:
+#     print(a/10)
+# except Exception as err:
+#     print("you can't multiply 0")
+# # print("printing done")
+# f = open(r'C:\Users\srika\OneDrive\Desktop\SDD.txt')
+# print(f.read())
+p = open("spiderman.py",'w')
+p.write("this is spiderman and here i will stay forever")
+p.close()

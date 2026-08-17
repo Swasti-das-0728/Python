@@ -11,14 +11,19 @@
 
 #     arr[j + 1] = key
 
-# print(arr)
-a = str(input("enter the string"))
-b = ""
+# # print(arr)
+# a = str(input("enter the string"))
+# b = ""
 
-for i in range (len(a) -1,-1,-1):
-    b = b + a[i]
-if b == a:
-    print(" paleindrom")
-else:
-    print("not")
+# for i in range (len(a) -1,-1,-1):
+#     b = b + a[i]
+# if b == a:
+#     print(" paleindrom")
+# else:
+#     print("not")
 
+
+number = float(input("enter the first num"))
+number2 = float(input("enter the second num"))
+sum = number + number2
+print(sum)

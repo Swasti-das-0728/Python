@@ -1,23 +1,8 @@
-# arr = [1, 2, 3, 4, 5]
-
-# even = 0
-# odd = 0
-
-# for i in arr:
-#     if i % 2 == 0:
-#         even += 1
-#     else:
-#         odd += 1
-
-# print("Even:", even)
-# print("Odd:", odd)
-arr = [1, 2, 3, 4]
-
-first = arr[0]
-
-for i in range(len(arr)-1):
-    arr[i] = arr[i+1]
-
-arr[-1] = first
-
-print(arr)
+arr=[10,23,43,55,60]
+target = int(input("ask a number to search"))
+for i in range (len(arr)):
+    if arr[i] == target:
+        print(f"the array found at index",i)
+        break
+    else:
+        print("-1")

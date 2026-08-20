@@ -24,15 +24,33 @@
 # Constructor
 
 
-class Candy:
-    def __init__(self,flavour,factory,rate):
-        self.flavour = flavour
-        self.factory = factory
-        self.rate = rate
-pulse = Candy("chocolate",5,10)
-munch = Candy("strawberry",6,5)
-kitkat = Candy("pinapple",9,9)
+# class Candy:
+#     def __init__(self,flavour,factory,rate):
+#         self.flavour = flavour
+#         self.factory = factory
+#         self.rate = rate
+#     def show(self):
+#         print(f"the objects are {self.factory},{self.rate},{self.flavour}")
+# pulse = Candy("chocolate",5,10)
+# munch = Candy("strawberry",6,5)
+# kitkat = Candy("pinapple",9,9)
 
-# question = str(input("enter your question"))
-# print(question)
-print(kitkat.factory)
+
+# # question = str(input("enter your question"))
+# # print(question)
+# kitkat.show()
+class Birds:
+    name = "parrot"         
+    def __init__(self,color):
+        self.color = color
+
+    @classmethod
+    def hello(cls):
+        print("hello brother")
+    @staticmethod
+    def static():
+        print("hi")
+obj =  Birds("red")
+obj.hello()
+obj.static()
+        

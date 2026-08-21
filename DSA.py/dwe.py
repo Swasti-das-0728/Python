@@ -39,18 +39,34 @@
 # # question = str(input("enter your question"))
 # # print(question)
 # kitkat.show()
-class Birds:
-    name = "parrot"         
-    def __init__(self,color):
-        self.color = color
+# class Birds:
+#     name = "parrot"         
+#     def __init__(self,color):
+#         self.color = color
 
-    @classmethod
-    def hello(cls):
-        print("hello brother")
-    @staticmethod
-    def static():
-        print("hi")
-obj =  Birds("red")
-obj.hello()
-obj.static()
+#     @classmethod
+#     def hello(cls):
+#         print("hello brother")
+#     @staticmethod
+#     def static():
+#         print("hi")
+# obj =  Birds("red")
+# obj.hello()
+# obj.static( )
         
+class School:
+    def __init__(self,rollno,domain,section):
+        self.rollno = rollno
+        self.name = domain
+        self.section = section
+    def sum(self,Firstnumber,Secondnumber):
+        self.Firstnumber = Firstnumber
+        self.Secondnumber = Secondnumber
+
+
+Swasti = School(338,"Aiml",'b') 
+tanmay = School(345,"st",'a')
+priti = School(342,"cloud",'b')
+
+print(Swasti.rollno)
+print(tanmay.section)

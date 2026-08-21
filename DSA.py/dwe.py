@@ -60,13 +60,17 @@ class School:
         self.name = domain
         self.section = section
     def sum(self,Firstnumber,Secondnumber):
-        self.Firstnumber = Firstnumber
-        self.Secondnumber = Secondnumber
+        return Firstnumber * Secondnumber
 
 
 Swasti = School(338,"Aiml",'b') 
 tanmay = School(345,"st",'a')
 priti = School(342,"cloud",'b')
+
+result = Swasti.sum(34,22)
+print(result)
+
+
 
 print(Swasti.rollno)
 print(tanmay.section)

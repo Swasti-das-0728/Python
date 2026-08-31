@@ -16,13 +16,12 @@
 # d.show()
 
 # print(D.mro())
-class Cat:
-    def sound(self):
-        print("Meow")
+class Bank:
+    def __init__(self):
+        self.__balance = 1000
 
-class Dog:
-    def sound(self):
-        print("Bark")
+    def get_balance(self):
+        return self.__balance
 
-for animal in [Cat(), Dog()]:
-    animal.sound()
+b = Bank()
+print(b.get_balance())

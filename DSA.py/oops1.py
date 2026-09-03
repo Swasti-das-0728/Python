@@ -33,18 +33,37 @@
 # class Child(Parent):
 #     pass
 
-# Child()
+# # Child()
 
-class Student:
-    college = "MIT"
+# class Student:
+#     college = "MIT"
 
-    def __init__(self, name):
-        self.name = name
+#     def __init__(self, name):
+#         self.name = name
 
-s1 = Student("Alice")
-s2 = Student("Bob")
+# s1 = Student("Alice")
+# s2 = Student("Bob")
 
-Student.college = "Harvard"
+# Student.college = "Harvard"
 
-print(s1.college)
-print(s2.college)
+# print(s1.college)
+# print(s2.college)
+
+n = 5
+s = "1"
+
+for _ in range(n - 1):
+    ans = ""
+    count = 1
+
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            count += 1
+        else:
+            ans += str(count) + s[i - 1]
+            count = 1
+
+    ans += str(count) + s[-1]
+    s = ans
+
+print(s)

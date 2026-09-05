@@ -69,13 +69,30 @@
 # print(s)
 
 
-from itertools import groupby
+# from itertools import groupby
 
+# class Solution:
+#     def countAndSay(self, n: int) -> str:
+#         s = "1"
+
+#         for _ in range(n - 1):
+#             s = "".join(str(len(list(g))) + k for k, g in groupby(s))
+
+#         return s
 class Solution:
     def countAndSay(self, n: int) -> str:
-        s = "1"
+        curr = "1"
 
-        for _ in range(n - 1):
-            s = "".join(str(len(list(g))) + k for k, g in groupby(s))
+        for _ in range(1, n):
+            left = 0
+            nxt = ""
 
-        return s
+            for right in range(len(curr)):
+                if curr[right] != curr[left]:
+                    nxt += str(right - left) + curr[left]
+                    left = right
+
+            nxt += str(len(curr) - left) + curr[left]
+            curr = nxt
+
+        return curr

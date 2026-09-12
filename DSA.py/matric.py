@@ -36,13 +36,21 @@
 
 # for animal in animals:
 #     animal.sound()
-class A:
-    def show(self):
-        print("A")
+# class A:
+#     def show(self):
+#         print("A")
 
-class B(A):
-    def show(self):
-        print("B")
+# class B(A):
+#     def show(self):
+#         print("B")
 
-obj = B()
-obj.show()
+# obj = B()
+# obj.show()
+class Student:
+    college = "CUTM"
+
+s1 = Student()
+s2 = Student()
+
+print(s1.college)
+print(s2.college)

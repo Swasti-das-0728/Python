@@ -45,12 +45,25 @@
 #         print("B")
 
 # obj = B()
-# obj.show()
-class Student:
-    college = "CUTM"
+# # obj.show()
+# class Student:
+#     college = "CUTM"
 
-s1 = Student()
-s2 = Student()
+# s1 = Student()
+# s2 = Student()
 
-print(s1.college)
-print(s2.college)
+# print(s1.college)
+# print(s2.college)
+class Bank:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def show(self):
+        print(self.balance)
+
+b = Bank(1000)
+b.deposit(500)
+b.show()

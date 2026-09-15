@@ -54,16 +54,22 @@
 
 # print(s1.college)
 # print(s2.college)
-class Bank:
-    def __init__(self, balance):
-        self.balance = balance
+# class Bank:
+#     def __init__(self, balance):
+#         self.balance = balance
 
-    def deposit(self, amount):
-        self.balance += amount
+#     def deposit(self, amount):
+#         self.balance += amount
 
-    def show(self):
-        print(self.balance)
+#     def show(self):
+#         print(self.balance)
 
-b = Bank(1000)
-b.deposit(500)
-b.show()
+# b = Bank(1000)
+# b.deposit(500)
+# b.show()
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+s = Student("Swasti")
+print(s.name)

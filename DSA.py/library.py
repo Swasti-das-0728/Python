@@ -21,3 +21,4 @@ class Circle:
 
 
 obj = Circle(3)
+obj.show()

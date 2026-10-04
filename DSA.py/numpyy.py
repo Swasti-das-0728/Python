@@ -1,8 +1,15 @@
-import numpy as np
+class Dog:
+    def sound(self):
+        print("Dog says: Woof")
 
-arr = np.random.randint(3, 55, (3, 3))
 
-print(arr)
+class Cat:
+    def sound(self):
+        print("Cat says: Meow")
 
-print(np.sum(arr, axis=0))
-print(np.sum(arr, axis=1))
+
+dog = Dog()
+cat = Cat()
+
+dog.sound()
+cat.sound()

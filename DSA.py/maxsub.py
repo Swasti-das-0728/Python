@@ -1,3 +1,4 @@
+
 sudoku = [
     [5, 3, 4, 6, 7, 8, 9, 1, 2],
     [6, 7, 2, 1, 9, 5, 3, 4, 8],
@@ -10,12 +11,12 @@ sudoku = [
     [3, 4, 5, 2, 8, 6, 1, 7, 9]
 ]
 
-
-import numpy as np
-
-sudoku = np.array(sudoku)
-
 for i in range(0, 9, 3):
     for j in range(0, 9, 3):
-        n = sudoku[i:i+3, j:j+3]
-        print(n.sum())
+        total = 0
+
+        for r in range(i, i + 3):
+            for c in range(j, j + 3):
+                total += sudoku[r][c]
+
+        print("Subgrid sum:", total)

@@ -32,16 +32,23 @@ sudoku = [
 #     else:
 #         print("Column", col + 1, "is invalid")
 
-for i in range(0, 9, 3):
-    for j in range(0, 9, 3):
+# for i in range(0, 9, 3):
+#     for j in range(0, 9, 3):
 
-        values = []
+#         values = []
 
-        for r in range(i, i + 3):
-            for c in range(j, j + 3):
-                values.append(sudoku[r][c])
+#         for r in range(i, i + 3):
+#             for c in range(j, j + 3):
+#                 values.append(sudoku[r][c])
 
-        if len(set(values)) == 9:
-            print("Subgrid", i // 3 + 1, j // 3 + 1, "is valid")
-        else:
-            print("Subgrid", i // 3 + 1, j // 3 + 1, "is invalid")
+#         if len(set(values)) == 9:
+#             print("Subgrid", i // 3 + 1, j // 3 + 1, "is valid")
+#         else:
+#             print("Subgrid", i // 3 + 1, j // 3 + 1, "is invalid")
+
+
+for i in range(9):
+    if len(set(sudoku[i])) == 9:
+        print("Row", i + 1, "is valid")
+    else:
+        print("Row", i + 1, "is invalid")

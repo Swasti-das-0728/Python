@@ -21,13 +21,27 @@ sudoku = [
 
 #         print("Subgrid sum:", total)
 
-for col in range(9):
-    column = []
+# for col in range(9):
+#     column = []
 
-    for row in range(9):
-        column.append(sudoku[row][col])
+#     for row in range(9):
+#         column.append(sudoku[row][col])
 
-    if len(set(column)) == 9:
-        print("Column", col + 1, "is valid")
-    else:
-        print("Column", col + 1, "is invalid")
+#     if len(set(column)) == 9:
+#         print("Column", col + 1, "is valid")
+#     else:
+#         print("Column", col + 1, "is invalid")
+
+for i in range(0, 9, 3):
+    for j in range(0, 9, 3):
+
+        values = []
+
+        for r in range(i, i + 3):
+            for c in range(j, j + 3):
+                values.append(sudoku[r][c])
+
+        if len(set(values)) == 9:
+            print("Subgrid", i // 3 + 1, j // 3 + 1, "is valid")
+        else:
+            print("Subgrid", i // 3 + 1, j // 3 + 1, "is invalid")

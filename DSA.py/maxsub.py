@@ -11,12 +11,23 @@ sudoku = [
     [3, 4, 5, 2, 8, 6, 1, 7, 9]
 ]
 
-for i in range(0, 9, 3):
-    for j in range(0, 9, 3):
-        total = 0
+# for i in range(0, 9, 3):
+#     for j in range(0, 9, 3):
+#         total = 0
 
-        for r in range(i, i + 3):
-            for c in range(j, j + 3):
-                total += sudoku[r][c]
+#         for r in range(i, i + 3):
+#             for c in range(j, j + 3):
+#                 total += sudoku[r][c]
 
-        print("Subgrid sum:", total)
+#         print("Subgrid sum:", total)
+
+for col in range(9):
+    column = []
+
+    for row in range(9):
+        column.append(sudoku[row][col])
+
+    if len(set(column)) == 9:
+        print("Column", col + 1, "is valid")
+    else:
+        print("Column", col + 1, "is invalid")

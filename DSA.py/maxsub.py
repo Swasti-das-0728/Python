@@ -42,43 +42,59 @@
 # #                 values.append(sudoku[r][c])
 
 # #         if len(set(values)) == 9:
-# #             print("Subgrid", i // 3 + 1, j // 3 + 1, "is valid")
-# #         else:
-# #             print("Subgrid", i // 3 + 1, j // 3 + 1, "is invalid")
+# # #             print("Subgrid", i // 3 + 1, j // 3 + 1, "is valid")
+# # #         else:
+# # #             print("Subgrid", i // 3 + 1, j // 3 + 1, "is invalid")
 
 
-# # for i in range(9):
-# #     if len(set(sudoku[i])) == 9:
-# #         print("Row", i + 1, "is valid")
-# #     else:
-# #         print("Row", i + 1, "is invalid")
+# # # for i in range(9):
+# # #     if len(set(sudoku[i])) == 9:
+# # #         print("Row", i + 1, "is valid")
+# # #     else:
+# # #         print("Row", i + 1, "is invalid")
 
 
-# def is_valid_sudoku(board):
-#     for i in range(9):
-#         row = [x for x in board[i] if x != 0]
-#         col = [board[r][i] for r in range(9)
-#                if board[r][i] != 0]
+# # def is_valid_sudoku(board):
+# #     for i in range(9):
+# #         row = [x for x in board[i] if x != 0]
+# #         col = [board[r][i] for r in range(9)
+# #                if board[r][i] != 0]
 
-#         if len(row) != len(set(row)):
-#             return False
+# #         if len(row) != len(set(row)):
+# #             return False
 
-#         if len(col) != len(set(col)):
-#             return False
+# #         if len(col) != len(set(col)):
+# #             return False
 
-#     for r in range(0, 9, 3):
-#         for c in range(0, 9, 3):
-#             box = []
+# #     for r in range(0, 9, 3):
+# #         for c in range(0, 9, 3):
+# #             box = []
 
-#             for i in range(r, r + 3):
-#                 for j in range(c, c + 3):
-#                     if board[i][j] != 0:
-#                         box.append(board[i][j])
+# #             for i in range(r, r + 3):
+# #                 for j in range(c, c + 3):
+# #                     if board[i][j] != 0:
+# #                         box.append(board[i][j])
 
-#             if len(box) != len(set(box)):
-#                 return False
+# #             if len(box) != len(set(box)):
+# #                 return False
 
-#     return True
+# #     return True
+
+
+# # board = [
+# #     [5, 3, 0, 0, 7, 0, 0, 0, 0],
+# #     [6, 0, 0, 1, 9, 5, 0, 0, 0],
+# #     [0, 9, 8, 0, 0, 0, 0, 6, 0],
+# #     [8, 0, 0, 0, 6, 0, 0, 0, 3],
+# #     [4, 0, 0, 8, 0, 3, 0, 0, 1],
+# #     [7, 0, 0, 0, 2, 0, 0, 0, 6],
+# #     [0, 6, 0, 0, 0, 0, 2, 8, 0],
+# #     [0, 0, 0, 4, 1, 9, 0, 0, 5],
+# #     [0, 0, 0, 0, 8, 0, 0, 7, 9]
+# # ]
+
+# # print("Valid Sudoku!" if is_valid_sudoku(board)
+# #       else "Invalid Sudoku!")
 
 
 # board = [
@@ -93,8 +109,37 @@
 #     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 # ]
 
-# print("Valid Sudoku!" if is_valid_sudoku(board)
-#       else "Invalid Sudoku!")
+# empty_cells = []
+
+# for r in range(9):
+#     for c in range(9):
+#         if board[r][c] == 0:
+#             empty_cells.append((r, c))
+
+# print("Total empty cells:", len(empty_cells))
+# print("Empty cell positions (row, column):")
+
+# for cell in empty_cells:
+#     print(cell)
+
+
+def candidates(board, row, col):
+    if board[row][col] != 0:
+        return []
+
+    used = set(board[row])
+
+    for r in range(9):
+        used.add(board[r][col])
+
+    start_r = (row // 3) * 3
+    start_c = (col // 3) * 3
+
+    for r in range(start_r, start_r + 3):
+        for c in range(start_c, start_c + 3):
+            used.add(board[r][c])
+
+    return [n for n in range(1, 10) if n not in used]
 
 
 board = [
@@ -109,15 +154,4 @@ board = [
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
 
-empty_cells = []
-
-for r in range(9):
-    for c in range(9):
-        if board[r][c] == 0:
-            empty_cells.append((r, c))
-
-print("Total empty cells:", len(empty_cells))
-print("Empty cell positions (row, column):")
-
-for cell in empty_cells:
-    print(cell)
+print("Candidates:", candidates(board, 0, 2))

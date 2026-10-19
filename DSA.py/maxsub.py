@@ -123,23 +123,38 @@
 #     print(cell)
 
 
-def candidates(board, row, col):
-    if board[row][col] != 0:
-        return []
+# def candidates(board, row, col):
+#     if board[row][col] != 0:
+#         return []
 
-    used = set(board[row])
+#     used = set(board[row])
 
-    for r in range(9):
-        used.add(board[r][col])
+#     for r in range(9):
+#         used.add(board[r][col])
 
-    start_r = (row // 3) * 3
-    start_c = (col // 3) * 3
+#     start_r = (row // 3) * 3
+#     start_c = (col // 3) * 3
 
-    for r in range(start_r, start_r + 3):
-        for c in range(start_c, start_c + 3):
-            used.add(board[r][c])
+#     for r in range(start_r, start_r + 3):
+#         for c in range(start_c, start_c + 3):
+#             used.add(board[r][c])
 
-    return [n for n in range(1, 10) if n not in used]
+#     return [n for n in range(1, 10) if n not in used]
+
+
+# board = [
+#     [5, 3, 0, 0, 7, 0, 0, 0, 0],
+#     [6, 0, 0, 1, 9, 5, 0, 0, 0],
+#     [0, 9, 8, 0, 0, 0, 0, 6, 0],
+#     [8, 0, 0, 0, 6, 0, 0, 0, 3],
+#     [4, 0, 0, 8, 0, 3, 0, 0, 1],
+#     [7, 0, 0, 0, 2, 0, 0, 0, 6],
+#     [0, 6, 0, 0, 0, 0, 2, 8, 0],
+#     [0, 0, 0, 4, 1, 9, 0, 0, 5],
+#     [0, 0, 0, 0, 8, 0, 0, 7, 9]
+# ]
+
+# print("Candidates:", candidates(board, 0, 2))
 
 
 board = [
@@ -154,4 +169,19 @@ board = [
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
 
-print("Candidates:", candidates(board, 0, 2))
+frequency = {n: 0 for n in range(1, 10)}
+empty = 0
+
+for row in board:
+    for num in row:
+        if num == 0:
+            empty += 1
+        elif 1 <= num <= 9:
+            frequency[num] += 1
+
+print("Number frequencies:")
+
+for num, count in frequency.items():
+    print(f"{num}: {count}")
+
+print("Empty cells:", empty)
